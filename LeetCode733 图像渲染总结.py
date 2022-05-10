@@ -106,11 +106,10 @@ newImage = solution.floodFill(image, sr, sc, newColor)
 print(newImage)         # [[2, 2, 2], [2, 2, 0], [2, 0, 1]]
 
 # 总结：使用堆栈或者队列的时候，一般采用while->for->if 的格式。
-# while判断队列或者堆栈是否为空，不为空则删除最后一个元素
+# while判断队列或者堆栈是否为空，不为空则先定义队头元素x,y,再删除排头的第一个元素，
 # for 遍历所有与当前元素挨着的元素（上下左右）
 # if 判断挨着的元素是否满足条件，满足条件则补充队列或者堆栈
-# 若在while后面进行上色的操作，则if后面不需要进行上色
-# 若在if后面进行上色的操作，则while后面不需要进行上色，但要在while循环前面即对第一个元素进行上色image[sr][sc] = newColor
+# 通常在if后面进行上色等操作，但要在while循环前面即对第一个元素进行上色image[sr][sc] = newColor等操作。
 
 
 
